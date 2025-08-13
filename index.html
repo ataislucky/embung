@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="2025-08-13" content="KKN Kepohagung-Unisda 2025">
+  <title>Wisata Embung Popoan – KKN UNISDA 2025</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+    
+  <!-- HERO FULLSCREEN -->
+  <header class="hero" role="banner">
+    <nav class="top-menu container" aria-label="Main navigation">
+      <div class="logo">
+    <a href="/">
+      <img src="logo/logo_transparan.png" alt="Logo Embung Popoan" class="logo" />
+    </a>
+  </div>
+    <ul class="nav-menu">
+        <li><a href="/">Beranda</a></li>
+      <li><a href="#denah">Tentang</a></li>
+      <li><a href="#fasilitas">Fasilitas</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#peta">Lokasi</a></li>
+    </ul>
+  </nav>
+    <div class="overlay"></div>
+    <div class="hero-inner container">
+      <h1>Wisata Embung Popoan</h1>
+      <p class="lead">Tenangnya air, rindangnya pepohonan — destinasi santai untuk keluarga & komunitas.</p>
+      <div class="hero-actions">
+        <a
+          id="btnRouteHero"
+          class="btn primary"
+          target="_blank"
+          rel="noopener"
+          >Lihat Lokasi</a
+        >
+        <a href="#denah" class="btn ghost">Lihat Denah</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- KARTU INFORMASI -->
+    <section id="fasilitas" class="container section">
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              ><path
+                d="M12 8v5l3 1"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            /></svg>
+          </div>
+          <div>
+            <h3>Jam Buka</h3>
+            <p class="muted">07.00 – 17.30 WIB (setiap hari)</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              ><path
+                d="M4 7h16M4 17h16M7 7v10"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            /></svg>
+          </div>
+          <div>
+            <h3>Tiket</h3>
+            <p class="muted">Rp 5.000/orang</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              ><path
+                d="M4 14h16M6 10h12"
+                stroke="currentColor"
+                stroke-width="1.6"
+            /></svg>
+          </div>
+          <div>
+            <h3>Fasilitas</h3>
+            <p class="muted">Kolam pemancingan, perahu bebek, spot foto, kantin</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- INFO + DENAH -->
+    <section
+      id="denah"
+      class="container section info-two-col"
+      aria-labelledby="denah-title"
+    >
+      <div class="info-text">
+        <h2 id="denah-title">Tentang Embung Popoan</h2>
+        <p>
+          Embung yang dikembangkan menjadi destinasi wisata desa. Aktivitas
+          populer: memancing, perahu santai, dan foto panorama saat matahari
+          terbenam.
+        </p>
+        <ul class="list">
+          <li>Area ramah keluarga & komunitas</li>
+          <li>Akses & parkir memadai</li>
+          <li>Spot foto dengan pemandangan embung</li>
+        </ul>
+        <div class="cta-row">
+          <a
+            id="btnRouteInfo"
+            class="btn primary"
+            target="_blank"
+            rel="noopener"
+            >Buka Rute Google Maps</a
+          >
+          <a href="#gallery" class="btn ghost">Lihat Galeri</a>
+        </div>
+      </div>
+
+      <div class="info-map">
+        <img src="images/denah_popoan.png" alt="Denah Wisata Embung Popoan (placeholder)" />
+      </div>
+    </section>
+
+    <!-- GALERI HORIZONTAL (4 foto tampilan awal) -->
+    <section
+      id="gallery"
+      class="container section gallery-section"
+      aria-label="Galeri Embung Popoan"
+    >
+      <h2>Galeri Wisata Embung Popoan</h2>
+
+      <div class="gallery-container" aria-hidden="false">
+        <button
+          class="gallery-btn left"
+          id="btnPrev"
+          aria-label="Sebelumnya"
+          type="button"
+        >
+          &#10094;
+        </button>
+
+        <div class="gallery-viewport" id="galleryViewport" aria-live="polite">
+          <div class="gallery-scroll" id="galleryScroll">
+            <!-- image galleries -->
+            <img
+              class="gallery-item"
+              src="images/1.jpg"
+              alt="Foto Embung 1"
+            />
+            <img
+              class="gallery-item"
+              src="images/2.jpg"
+              alt="Foto Embung 2"
+            />
+            <img
+              class="gallery-item"
+              src="images/3.jpg"
+              alt="Foto Embung 3"
+            />
+            <img
+              class="gallery-item"
+              src="images/4.jpg"
+              alt="Foto Embung 4"
+            />
+            <img
+              class="gallery-item"
+              src="images/5.jpg"
+              alt="Foto Embung 5"
+            />
+            <img
+              class="gallery-item"
+              src="images/6.jpg"
+              alt="Foto Embung 5"
+            />
+            <img
+              class="gallery-item"
+              src="images/7.jpg"
+              alt="Foto Embung 5"
+            />
+            <img
+              class="gallery-item"
+              src="images/8.jpg"
+              alt="Foto Embung 6"
+            />
+            <img
+              class="gallery-item"
+              src="images/9.jpg"
+              alt="Foto Embung 7"
+            />
+            <img
+              class="gallery-item"
+              src="images/10.jpg"
+              alt="Foto Embung 8"
+            />
+            <img
+              class="gallery-item"
+              src="images/11.jpg"
+              alt="Foto Embung 9"
+            />
+            <img
+              class="gallery-item"
+              src="images/12.jpg"
+              alt="Foto Embung 10"
+            />
+            <img
+              class="gallery-item"
+              src="images/13.jpg"
+              alt="Foto Embung 11"
+            />
+            <img
+              class="gallery-item"
+              src="images/16.jpg"
+              alt="Foto Embung 12"
+            />
+            <img
+              class="gallery-item"
+              src="images/17.jpg"
+              alt="Foto Embung 13"
+            />
+            <img
+              class="gallery-item"
+              src="images/18.jpg"
+              alt="Foto Embung 14"
+            />
+            <img
+              class="gallery-item"
+              src="images/19.jpg"
+              alt="Foto Embung 15"
+            />
+            <img
+              class="gallery-item"
+              src="images/20.jpg"
+              alt="Foto Embung 16"
+            />
+            <img
+              class="gallery-item"
+              src="images/21.jpg"
+              alt="Foto Embung 17"
+            />
+          </div>
+        </div>
+
+        <button
+          class="gallery-btn right"
+          id="btnNext"
+          aria-label="Berikutnya"
+          type="button"
+        >
+          &#10095;
+        </button>
+      </div>
+    </section>
+
+    <!-- PETA INTERAKTIF -->
+    <section id="peta" class="map-wrap section">
+      <div class="container">
+        <h2>Peta Lokasi</h2>
+        <p class="muted">Zoom dan klik marker untuk melihat informasi lokasi.</p>
+      </div>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>
+        &copy; <span id="year"></span> KKN UNISDA • Semua hak dilindungi
+      </small>
+      <p>
+      <small>Deskripsi, foto, ilustrasi, denah, desain, dan kode website ini merupakan karya asli KKN Kepohagung UNISDA 2025
+      <br/> dan tidak boleh disalin atau digunakan tanpa izin tertulis. Email PJ: <a href="mailto:ata@unisda.ac.id">ata@unisda.ac.id</a>
+    </p>
+    <p>
+      <a href="syarat.html">Syarat & Ketentuan</a> | 
+      <a href="privacy.html">Kebijakan Privasi</a></small>
+    </p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div
+    id="lightbox"
+    class="lightbox"
+    tabindex="0"
+    aria-modal="true"
+    role="dialog"
+    aria-label="Galeri foto embung popoan"
+  >
+    <span class="lightbox-close" role="button" aria-label="Tutup lightbox"
+      >&times;</span
+    >
+    <img class="lightbox-content" id="lightbox-img" alt="Preview gambar galeri" />
+    <a class="lightbox-prev" role="button" aria-label="Foto sebelumnya" tabindex="0"
+      >&#10094;</a
+    >
+    <a class="lightbox-next" role="button" aria-label="Foto berikutnya" tabindex="0"
+      >&#10095;</a
+    >
+  </div>
+  <button id="btnToTop" aria-label="Kembali ke atas" title="Kembali ke atas">
+  ↑
+  </button>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
