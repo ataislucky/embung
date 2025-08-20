@@ -130,6 +130,20 @@ img {
   transform: scale(1.05);
 }
 
+.logo-link {
+  display: block;
+  width: 90px;   /* ukuran logo */
+  height: 90px; 
+  background: url("logo/logo_transparan.png") no-repeat center/contain;
+  filter: drop-shadow(0 0 21px #ffffff);
+  animation: logoGlow 2.5s infinite ease-in-out;
+  text-indent: -9999px; /* sembunyikan teks kalau ada */
+}
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+
 /* Animasi glow */
 @keyframes logoGlow {
   0% {
