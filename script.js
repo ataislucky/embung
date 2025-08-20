@@ -192,3 +192,28 @@ if (hamburger && navMenu) {
     console.log("Hamburger clicked -> toggle menu");
   });
 }
+
+// ============================
+// SWITCH THEME TOGGLE
+// ============================
+const themeToggle = document.getElementById("themeToggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.documentElement.classList.toggle("light");
+
+    // ganti ikon 🌙 / ☀️
+    if (document.documentElement.classList.contains("light")) {
+      themeToggle.textContent = "☀️";
+      localStorage.setItem("theme", "light");
+    } else {
+      themeToggle.textContent = "🌙";
+      localStorage.setItem("theme", "dark");
+    }
+  });
+
+  // load preference dari localStorage
+  if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light");
+    themeToggle.textContent = "☀️";
+  }
+}

@@ -1,3 +1,4 @@
+/* Default: Dark Theme */
 :root {
   --bg: #0b1220;
   --card: #0f172a;
@@ -7,6 +8,7 @@
   --accent-2: #4cc9f0;
   --ring: rgba(76, 201, 240, 0.22);
 }
+
 
 /* KKN Kepohagung-Unisda 2025 */
 
@@ -490,7 +492,7 @@ figure.info-map {
 /* GALLERY HORIZONTAL */
 .gallery-section h2 {
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   font-weight: 700;
 }
 .gallery-container {
@@ -563,8 +565,8 @@ figure.info-map {
 
 /* MAP */
 .map-wrap {
-  padding-top: 20px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 10px;
 }
 #map {
   height: 520px;
@@ -578,7 +580,7 @@ figure.info-map {
 /* FOOTER */
 .footer {
   padding: 20px 0;
-  background: transparent; /* tetap transparan sesuai tema */
+  background: linear-gradient(180deg, #0b1220, #060812);
   border-top: 2px solid rgba(255, 255, 255, 0.03);
   margin-top: 40px;
   text-align: center;
