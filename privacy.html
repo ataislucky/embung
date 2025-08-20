@@ -19,11 +19,21 @@
       <img src="logo/logo_transparan.png" alt="Logo Embung Popoan" class="logo" />
     </a>
   </div>
-      <ul class="nav-menu">
+
+    <!-- Tombol Hamburger -->
+    <div class="hamburger" id="hamburger" aria-label="Buka menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Beranda</a></li>
-        <li><a href="syarat.html">Syarat & Ketentuan</a></li>
-        <li><a href="privacy.html">Kebijakan Privasi</a></li>
-      </ul>
+        <li><a href="index.html#denah">Tentang</a></li>
+        <li><a href="fasilitas.html">Fasilitas</a></li>
+        <li><a href="index.html#gallery">Galeri</a></li>
+        <li><a href="index.html#peta">Lokasi</a></li>
+    </ul>
     </nav>
     <div class="overlay"></div>
     <div class="hero-inner container">
@@ -61,5 +71,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="script.js"></script>
 </body>
 </html>

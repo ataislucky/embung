@@ -170,14 +170,62 @@ img {
   /*box-shadow: 0 6px 14px rgba(58, 134, 255, 0.3);*/
 }
 
-/* Responsive untuk mobile */
-@media (max-width: 600px) {
-  .top-menu {
-    justify-content: center;
+/* Mobile Style */
+@media (max-width: 768px) {
+  .top-menu .nav-menu {
+    display: none !important; /* 🔥 pakai !important biar override */
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    margin-top: 12px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85); /* biar jelas pas muncul */
+    padding: 16px 0;
+    border-radius: 12px;
+    position: absolute;
+    top: 80px; /* turun sedikit di bawah navbar */
+    left: 0;
   }
 
-  .top-menu .nav-menu {
-    gap: 16px;
+  .top-menu .nav-menu.active {
+    display: flex !important; /* 🔥 override tampil */
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: 0.3s ease;
+  }
+
+  /* Animasi berubah jadi X */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
   }
 }
 
@@ -438,13 +486,13 @@ figure.info-map {
   position: relative;
   gap: 12px;
 }
-.gallery-viewport {
-  overflow: hidden;
-  width: 100%;
-  max-width: 1060px;
-  border-radius: 12px;
-  position: relative;
+.gallery-viewport{
+  overflow-x: auto;   /* sebelumnya hidden */
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
+.gallery-viewport::-webkit-scrollbar { display: none; }
+
 .gallery-scroll {
   display: flex;
   gap: 20px;
@@ -653,7 +701,7 @@ figure.info-map {
 
   .gallery-item {
     width: 100%;
-    height: auto;
+    height: 220px;
   }
 }
 
@@ -721,4 +769,26 @@ figure.info-map {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 12px;
+}
+
+/* === FIX FINAL: GALERI KECIL (desktop + mobile) === */
+
+/* Pastikan tombol galeri kecil posisinya absolut di dalam gallery-container */
+.gallery-container {
+  position: relative; /* referensi untuk absolute child */
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20; /* cukup tinggi, tapi masih di bawah lightbox */
+}
+
+.gallery-btn.left {
+  left: 10px;
+}
+
+.gallery-btn.right {
+  right: 10px;
 }

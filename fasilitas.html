@@ -18,13 +18,22 @@
           <img src="logo/logo_transparan.png" alt="Logo Embung Popoan" class="logo"/>
         </a>
       </div>
-      <ul class="nav-menu">
-        <li><a href="/">Beranda</a></li>
-        <li><a href="#denah">Tentang</a></li>
+
+      <!-- Tombol Hamburger -->
+    <div class="hamburger" id="hamburger" aria-label="Buka menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="index.html#denah">Tentang</a></li>
         <li><a href="fasilitas.html">Fasilitas</a></li>
         <li><a href="index.html#gallery">Galeri</a></li>
         <li><a href="index.html#peta">Lokasi</a></li>
-      </ul>
+    </ul>
+
     </nav>
     <div class="overlay"></div>
     <div class="hero-inner container">
@@ -63,14 +72,21 @@
 
   <footer class="footer">
     <div class="container">
-      <small>
-        &copy; <span id="year"></span> KKN UNISDA • Semua hak dilindungi
-      </small>
+      <small>&copy; <span id="year"></span> KKN UNISDA 2025 • Semua hak dilindungi</small>
+      <p>
+        <small>Deskripsi, foto, ilustrasi, denah, desain, dan kode website ini merupakan karya asli KKN Kepohagung UNISDA 2025
+        <br/> dan tidak boleh disalin atau digunakan tanpa izin tertulis. Email PJ: <a href="mailto:ata@unisda.ac.id">ata@unisda.ac.id</a>
+      </p>
+      <p>
+        <a href="syarat.html">Syarat & Ketentuan</a> | 
+        <a href="privacy.html">Kebijakan Privasi</a></small>
+      </p>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
