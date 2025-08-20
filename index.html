@@ -52,7 +52,7 @@
     <!-- KARTU INFORMASI -->
     <section id="fasilitas" class="container section">
       <div class="cards">
-        <article class="card">
+        <article class="card jam-buka">
           <div class="card-icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -70,7 +70,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card tiket">
           <div class="card-icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -89,7 +89,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card fasilitas">
           <div class="card-icon" aria-hidden="true">
             <svg
               viewBox="0 0 24 24"
@@ -103,6 +103,7 @@
           <div>
             <h3>Fasilitas</h3>
             <p class="muted">Kolam pemancingan, perahu bebek, spot foto, kantin</p>
+            <a href="fasilitas.html" class="btn ghost">Lihat Selengkapnya</a>
           </div>
         </article>
       </div>
@@ -138,9 +139,7 @@
         </div>
       </div>
 
-      <div class="info-map">
-        <img src="images/denah_popoan.png" alt="Denah Wisata Embung Popoan (placeholder)" />
-      </div>
+      <div class="info-map" role="img" aria-label="Denah Wisata Embung Popoan (placeholder)"></div>
     </section>
 
     <!-- GALERI HORIZONTAL (4 foto tampilan awal) -->
@@ -163,104 +162,60 @@
 
         <div class="gallery-viewport" id="galleryViewport" aria-live="polite">
           <div class="gallery-scroll" id="galleryScroll">
-            <!-- image galleries -->
-            <img
-              class="gallery-item"
-              src="images/1.jpg"
-              alt="Foto Embung 1"
-            />
-            <img
-              class="gallery-item"
-              src="images/2.jpg"
-              alt="Foto Embung 2"
-            />
-            <img
-              class="gallery-item"
-              src="images/3.jpg"
-              alt="Foto Embung 3"
-            />
-            <img
-              class="gallery-item"
-              src="images/4.jpg"
-              alt="Foto Embung 4"
-            />
-            <img
-              class="gallery-item"
-              src="images/5.jpg"
-              alt="Foto Embung 5"
-            />
-            <img
-              class="gallery-item"
-              src="images/6.jpg"
-              alt="Foto Embung 5"
-            />
-            <img
-              class="gallery-item"
-              src="images/7.jpg"
-              alt="Foto Embung 5"
-            />
-            <img
-              class="gallery-item"
-              src="images/8.jpg"
-              alt="Foto Embung 6"
-            />
-            <img
-              class="gallery-item"
-              src="images/9.jpg"
-              alt="Foto Embung 7"
-            />
-            <img
-              class="gallery-item"
-              src="images/10.jpg"
-              alt="Foto Embung 8"
-            />
-            <img
-              class="gallery-item"
-              src="images/11.jpg"
-              alt="Foto Embung 9"
-            />
-            <img
-              class="gallery-item"
-              src="images/12.jpg"
-              alt="Foto Embung 10"
-            />
-            <img
-              class="gallery-item"
-              src="images/13.jpg"
-              alt="Foto Embung 11"
-            />
-            <img
-              class="gallery-item"
-              src="images/16.jpg"
-              alt="Foto Embung 12"
-            />
-            <img
-              class="gallery-item"
-              src="images/17.jpg"
-              alt="Foto Embung 13"
-            />
-            <img
-              class="gallery-item"
-              src="images/18.jpg"
-              alt="Foto Embung 14"
-            />
-            <img
-              class="gallery-item"
-              src="images/19.jpg"
-              alt="Foto Embung 15"
-            />
-            <img
-              class="gallery-item"
-              src="images/20.jpg"
-              alt="Foto Embung 16"
-            />
-            <img
-              class="gallery-item"
-              src="images/21.jpg"
-              alt="Foto Embung 17"
-            />
+
+            <div class="gallery-item" style="background-image:url('images/1.jpg')" 
+                data-src="images/1.jpg" aria-label="Foto Embung 1"></div>
+
+            <div class="gallery-item" style="background-image:url('images/2.jpg')" 
+                data-src="images/2.jpg" aria-label="Foto Embung 2"></div>
+
+            <div class="gallery-item" style="background-image:url('images/3.jpg')" 
+                data-src="images/3.jpg" aria-label="Foto Embung 3"></div>
+
+            <div class="gallery-item" style="background-image:url('images/4.jpg')" 
+                data-src="images/4.jpg" aria-label="Foto Embung 4"></div>
+
+            <div class="gallery-item" style="background-image:url('images/5.jpg')" 
+                data-src="images/5.jpg" aria-label="Foto Embung 5"></div>
+
+            <div class="gallery-item" style="background-image:url('images/6.jpg')" 
+                data-src="images/6.jpg" aria-label="Foto Embung 6"></div>
+
+            <div class="gallery-item" style="background-image:url('images/7.jpg')" 
+                data-src="images/7.jpg" aria-label="Foto Embung 7"></div>
+
+            <div class="gallery-item" style="background-image:url('images/8.jpg')" 
+                data-src="images/8.jpg" aria-label="Foto Embung 8"></div>
+
+            <div class="gallery-item" style="background-image:url('images/9.jpg')" 
+                data-src="images/9.jpg" aria-label="Foto Embung 9"></div>
+
+            <div class="gallery-item" style="background-image:url('images/10.jpg')" 
+                data-src="images/10.jpg" aria-label="Foto Embung 10"></div>
+
+            <div class="gallery-item" style="background-image:url('images/11.jpg')" 
+                data-src="images/11.jpg" aria-label="Foto Embung 11"></div>
+
+            <div class="gallery-item" style="background-image:url('images/12.jpg')" 
+                data-src="images/12.jpg" aria-label="Foto Embung 12"></div>
+
+            <div class="gallery-item" style="background-image:url('images/13.jpg')" 
+                data-src="images/13.jpg" aria-label="Foto Embung 13"></div>
+
+            <div class="gallery-item" style="background-image:url('images/16.jpg')" 
+                data-src="images/16.jpg" aria-label="Foto Embung 14"></div>
+
+            <div class="gallery-item" style="background-image:url('images/17.jpg')" 
+                data-src="images/17.jpg" aria-label="Foto Embung 15"></div>
+
+            <div class="gallery-item" style="background-image:url('images/18.jpg')" 
+                data-src="images/18.jpg" aria-label="Foto Embung 16"></div>
+
+            <div class="gallery-item" style="background-image:url('images/19.jpg')" 
+                data-src="images/19.jpg" aria-label="Foto Embung 17"></div>
           </div>
         </div>
+
 
         <button
           class="gallery-btn right"
@@ -319,6 +274,12 @@
       >&#10095;</a
     >
   </div>
+    <!-- Lightbox Denah -->
+  <div id="lightbox-denah" class="lightbox-denah" aria-modal="true" role="dialog">
+  <span class="lightbox-close" role="button" aria-label="Tutup denah">&times;</span>
+  <img id="lightbox-denah-img" alt="Preview Denah" />
+</div>
+
   <button id="btnToTop" aria-label="Kembali ke atas" title="Kembali ke atas">
   ↑
   </button>
