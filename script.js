@@ -34,7 +34,7 @@ const mapsUrl =
   "https://www.google.com/maps/dir/?api=1&destination=-7.043350649199297,112.07425779150154";
 
 const btnRouteHero = document.getElementById("btnRouteHero");
-if (btnRouteHero) btnRouteHero.href = mapsUrl;
+if (btnRouteHero) btnRouteHero.href = '#peta';
 
 const btnRouteInfo = document.getElementById("btnRouteInfo");
 if (btnRouteInfo) btnRouteInfo.href = mapsUrl;
